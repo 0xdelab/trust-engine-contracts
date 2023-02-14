@@ -1,0 +1,24 @@
+registry:
+  file: 'registry/ContractRegistry.sol'
+contracts:
+  - name: audit
+    versions:
+      - name: v1
+        files:
+          AuditTrail: 'audit/v1/AuditTrail.sol'
+        flags:
+          - audit/breadcrumbs
+  - name: process
+    versions:
+      - name: v1
+        files:
+          ProcessRegistry: 'process/v1/ProcessRegistry.sol'
+        flags:
+          - process/create
+          - process/sign/v1
+      - name: v2
+        files:
+          ProcessRegistry: 'process/v2/ProcessRegistry.sol'
+        flags:
+          - process/create
+          - process/sign/v2
